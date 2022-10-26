@@ -56,7 +56,7 @@ namespace FuelQueManagement_Service.Services
             return res.ToList()[0];
         }
 
-        // This is required to update diesel status
+        // refers the update diesel status
         public async Task<FuelStationModel> UpdateDieselStatus(bool status, string id)
         {
             FuelStationModel fuelStation = new FuelStationModel();

@@ -7,7 +7,7 @@ namespace FuelQueManagement_Service.Services
 {
     public class FuelService
     {
-        //creating the database connection
+        //create the database connection
         private readonly IMongoCollection<FuelStationModel> _Collection;
         public FuelService(IOptions<DatabaseConnection> datbaseConnection)
         {
