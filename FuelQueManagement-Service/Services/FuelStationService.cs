@@ -6,7 +6,7 @@ namespace FuelQueManagement_Service.Services
 {
     public class FuelStationService
     {
-        //creating the database connection
+        //Implementing  the database connection
         private readonly IMongoCollection<FuelStationModel> _Collection;
         public FuelStationService(IOptions<DatabaseConnection> datbaseConnection)
         {
@@ -20,7 +20,7 @@ namespace FuelQueManagement_Service.Services
                 datbaseConnection.Value.CollectionName);
         }
 
-        // This is required to create a fuel station
+        // refers for  the  create a fuel station
         public async Task<FuelStationModel> Create(FuelStationModel request)
         {
             FuelStationModel fuelStation = new FuelStationModel();
@@ -42,14 +42,14 @@ namespace FuelQueManagement_Service.Services
             return res[0];
         }
 
-        // This is required to get all fuel stations
+        // refers  to get all fuel stations
         public async Task<List<FuelStationModel>> GetFuelStations()
         {
             var res = _Collection.Find(_ => true).ToList();
             return res;
         }
 
-        // This is required to get fuel station by id
+        // refers to get fuel station by id
         public async Task<FuelStationModel> GetFuelStationById(string id)
         {
             var res = await _Collection.FindAsync(c => c.Id == id);

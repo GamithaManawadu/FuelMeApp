@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FuelQueManagement_Service.Models
 {
+    //Implementing Fuel Model Class
     public class FuelModel
     {
         [BsonId]

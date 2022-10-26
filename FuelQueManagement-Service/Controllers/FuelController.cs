@@ -8,7 +8,7 @@ namespace FuelQueManagement_Service.Controllers;
 [Route("[controller]")]
 public class FuelController : ControllerBase
 {
-    //Declearing the fuel service instance
+    //Decleare the fuel service 
     private readonly FuelService _fuelService;
     private readonly FuelStationService _fuelStationService;
     public FuelController(FuelService fuelService, FuelStationService fuelStationService)
@@ -17,7 +17,7 @@ public class FuelController : ControllerBase
         _fuelStationService = fuelStationService;
     }
 
-    //This is required to create a fuel object 
+    // create a fuel object 
     [HttpPost]
     public async Task<FuelStationModel> Create(FuelModel request) 
     {

@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FuelQueManagement_Service.Models
 {
+    //Implementing queue model
     public class QueueModel
     {
 

@@ -21,7 +21,7 @@ namespace FuelQueManagement_Service.Services
                 datbaseConnection.Value.CollectionName);
         }
 
-        //This is required to create a fuel object
+        // create a fuel object
         public async Task<FuelStationModel> Create(FuelModel request)
         {
             FuelModel fuelModel = new FuelModel();
