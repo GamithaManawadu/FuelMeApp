@@ -8,12 +8,12 @@ namespace FuelQueManagement_Service.Controllers;
 [Route("[controller]")]
 public class FuelStationController : ControllerBase
 {
-    // Declearing the fuel station service instance
+    // Declere  the fuel station service 
     private readonly FuelStationService _fuelStationService;
     public FuelStationController(FuelStationService fuelStationService) =>
         _fuelStationService = fuelStationService;
 
-    // This is required to create a fuel station
+    // refers  create a fuel station
     [HttpPost]
     public async Task<FuelStationModel> Create(FuelStationModel request)
     {
@@ -28,7 +28,7 @@ public class FuelStationController : ControllerBase
         }
     }
 
-    // This is required to get all fuel stations
+    // refers the  get all fuel stations
     [HttpGet]
     public async Task<List<FuelStationModel>> GetFuelStations()
     {
@@ -43,7 +43,7 @@ public class FuelStationController : ControllerBase
         }
     }
 
-    // This is required to get fuel station by id
+    // refers the  get fuel station by id
     [HttpGet("{id}")]
     public async Task<FuelStationModel> GetFuelStationById(string id)
     {
@@ -58,7 +58,7 @@ public class FuelStationController : ControllerBase
         }
     }
 
-    // This is required to update diesel status
+    // refers  to update diesel status
     [HttpPut]
     [Route("UpdateDieselStatus")]
     public async Task<FuelStationModel> UpdateDieselStatus(bool status, string id)
@@ -74,7 +74,7 @@ public class FuelStationController : ControllerBase
         }
     }
 
-    // This is required to update petrol status
+    // refers to  to update petrol status
     [HttpPut]
     [Route("UpdatePetrolStatus")]
     public async Task<FuelStationModel> UpdatePetrolStatus(bool status, string id)
@@ -92,7 +92,7 @@ public class FuelStationController : ControllerBase
 
     [HttpPut]
     [Route("UpdateFuelAmount")]
-    // This is required to update the total fuel amount
+    // refers  to update the total fuel amount
     public async void UpdateTotalFuelAmount(string stationId, int amount, string type)
     {
         try

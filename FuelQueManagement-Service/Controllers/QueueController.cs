@@ -10,7 +10,7 @@ namespace FuelQueManagement_Service.Controllers
     [Route("[controller]")]
     public class QueueController : Controller
     {
-        // Declearing the fuel station service instance
+        // Decleare the fuel station service 
         private readonly QueueService _queueService;
         private readonly FuelStationService _fuelStationService;
         private readonly IConfiguration _Configuration;
@@ -22,7 +22,7 @@ namespace FuelQueManagement_Service.Controllers
             _Configuration = iConfig;
         }
 
-        // This is required to create a queue object
+        // refers to to create a queue object
         [HttpPost]
         public async Task<FuelStationModel> Create(QueueModel request)
         {
@@ -37,7 +37,7 @@ namespace FuelQueManagement_Service.Controllers
             }
         }
 
-        // This is required to delete a queue object
+        // refers to delete a queue object
         [HttpDelete]
         public async Task<FuelStationModel> Delete(string fuelType, string stationId, string queueId, bool aquired)
         {
@@ -63,7 +63,7 @@ namespace FuelQueManagement_Service.Controllers
             }
         }
 
-        // This is required to get the station by queue Id
+        // refers to to get the station by queue Id
         [HttpGet]
         [Route("GetStation")]
         public async Task<FuelStationModel> GetStation(string queueId)
@@ -71,7 +71,7 @@ namespace FuelQueManagement_Service.Controllers
             return await _fuelStationService.GetStationByQueueId(queueId);
         }
 
-        // This is required to get the queue time
+        // refers  to get the queue time
         [HttpGet]
         [Route("GetQueueTime")]
         public async Task<string> GetQueueTime(string stationId)
@@ -90,7 +90,7 @@ namespace FuelQueManagement_Service.Controllers
 
         }
 
-        // This is required to getthe queue length
+        // refers to required to getthe queue length
         [HttpGet]
         [Route("GetQueueLength")]
         public async Task<Array> GetQueueLength(string stationId)
